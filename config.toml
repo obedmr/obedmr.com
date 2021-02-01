@@ -54,7 +54,7 @@ disableLanguages        = [""]
 
   [params.header]
     # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "Obed N Muñoz's Blog"
+    navbarTitle         = "Obed N Munoz's Blog"
     # Sets navbarTitle to match the section of the website
     dynamicTitles       = true
     searchMenu          = true
@@ -101,7 +101,7 @@ disableLanguages        = [""]
       # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
       shape               = "circle"
       width               = ""
-      alt                 = "Obed N Muñoz"
+      alt                 = "Obed N Munoz"
 
 
   [params.sidebar]
