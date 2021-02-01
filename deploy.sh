@@ -19,3 +19,7 @@ git push origin master --force
 
 # Come Back up to the Project Root
 cd ..
+
+# Update submodule
+git add public
+git commit -s -m "Update public submodule"
