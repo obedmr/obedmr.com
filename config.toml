@@ -5,7 +5,7 @@ theme = "hugo-future-imperfect-slim"
 preserveTaxonomyNames   = true
 paginate                = 3
 disqusShortname         = "obedmr"
-googleAnalytics         = ""
+googleAnalytics         = "UA-51720562-1"
 pluralizeListTitles     = false
 disableLanguages        = [""]
 
