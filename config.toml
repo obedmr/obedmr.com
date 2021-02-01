@@ -9,6 +9,9 @@ googleAnalytics         = ""
 pluralizeListTitles     = false
 disableLanguages        = [""]
 
+[outputs]
+  home                  = ["html", "json"]
+
 [params]
   # Add additional section names to mainSections to include posts from
   # those sections on the homepage.
