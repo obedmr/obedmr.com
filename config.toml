@@ -51,7 +51,7 @@ disableLanguages        = [""]
 
   [params.header]
     # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "Obed N Munoz's Blog"
+    navbarTitle         = "Obed N Muñoz's Blog"
     # Sets navbarTitle to match the section of the website
     dynamicTitles       = true
     searchMenu          = true
@@ -79,6 +79,27 @@ disableLanguages        = [""]
       shape               = "circle"
       width               = ""
       alt                 = "Obed N Munoz"
+
+  [Languages.es.params.intro]
+    header                = "Aprende haciendo, aprende enseñando"
+    paragraph             = "Si, si podemos hacer una diferencia"
+    rssIntro              = true
+    socialIntro           = true
+    # You may not want to display a long intro above content in the
+    # single column layout used on smaller screens.
+    hideWhenSingleColumn  = false
+    # But you may want to always display the intro on the homepage.
+    alwaysOnHomepage      = false
+
+    # This appears at the top of the sidebar above params.intro.header.
+    # A width of less than 100px is recommended from a design perspective.
+  [Languages.es.params.intro.pic]
+      src                 = "/img/main/me.jpeg"
+      # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
+      shape               = "circle"
+      width               = ""
+      alt                 = "Obed N Muñoz"
+
 
   [params.sidebar]
     about               = "test"
@@ -229,6 +250,7 @@ disableLanguages        = [""]
     url               = "/contact/"
     pre               = "<i class='far fa-envelope'></i>"
     weight            = 7
+
 
 
 # Sets Social Media icons to appear and link to your account. Value should be your
