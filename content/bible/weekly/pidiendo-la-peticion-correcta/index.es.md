@@ -1,25 +1,18 @@
 ---
-title: "Pidiendo la petición correcta"
+title: "Pidiendo La Petición Correcta"
 date: 2021-02-07
-publishdate: 2021-02-07
+description: "Una reflexión sobre la petición de Salomón y cómo pedir conforme a la voluntad de Dios."
+summary: "Una reflexión sobre la petición de Salomón, la sabiduría que Dios concedió, y cómo aprender a pedir correctamente."
 categories:
 - bible
 - weekly-treasure
 tags:
 - bible
 - treasure
-- spanish
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- oracion
+translationKey: pidiendo-la-peticion-correcta
+aliases:
+- /es/bible/weekly/es/pidiendo-la-peticion-correcta/
 ---
 ¿Cómo pedir para recibir? ¿por qué cuando pido no recibo? ¿que me
 falta para que mi petición sea escuchada? y otras cuestiones son las

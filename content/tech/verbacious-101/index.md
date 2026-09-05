@@ -1,23 +1,18 @@
 ---
-title: Verbacious 101
+title: "Verbacious 101"
 date: 2017-06-09
+description: "Notes and slides from a career talk about communication, professional growth, and learning to present your work."
+summary: "A career-focused talk about sharing your work well, communicating clearly, and learning from professional experience."
 categories:
-- talks
 - tech
+- talks
 tags:
-- talks
-- tech
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- career
+- communication
+- open-source
+translationKey: verbacious-101
+aliases:
+- /tech/en/verbacious-101/
 ---
 This time I have the opportunity to share some of the lessons learned on my career.
 I went to Zacatecas city for the [2017 CISOL](http://www.cozcyt.gob.mx/cisol/)

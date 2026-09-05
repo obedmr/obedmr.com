@@ -1,23 +1,19 @@
 ---
-title: Golang, Python or C/C++, who wins?
+title: "Golang, Python or C/C++: Who Wins?"
 date: 2017-05-08
+description: "Notes and slides from a talk about choosing programming languages based on the problem you need to solve."
+summary: "A talk about Golang, Python, and C/C++, framed around choosing a language by understanding the problem first."
 categories:
-- talks
 - tech
+- talks
 tags:
-- talks
-- tech
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- golang
+- python
+- c
+- programming
+translationKey: golang-python-c
+aliases:
+- /tech/en/golang-python-c-who-wins/
 ---
 This time I had an opportunity for presenting at Ameca, Jalisco. I presented at the [CUVALLES](http://www.valles.udg.mx/) 
 university.

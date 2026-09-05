@@ -1,24 +1,18 @@
 ---
-title: "5 Claves para una vida bendecida"
+title: "5 Claves Para Una Vida Bendecida"
 date: 2021-01-31
+description: "Una reflexión sobre Proverbios 3 y cinco principios bíblicos para vivir en bendición."
+summary: "Una reflexión sobre Proverbios 3 y cinco principios de la Palabra de Dios para vivir en bendición."
 categories:
 - bible
 - weekly-treasure
 tags:
 - bible
 - treasure
-- spanish
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- proverbios
+translationKey: cinco-claves-vida-bendecida
+aliases:
+- /es/bible/weekly/es/5-claves-para-una-vida-bendecida/
 ---
 Todos queremos ser bendecidos. Todos queremos vivir vidas en paz y con
 mucho gozo y alegría. Lo interesante es que por mas esfuerzos que

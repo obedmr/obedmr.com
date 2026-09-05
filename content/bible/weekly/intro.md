@@ -1,24 +1,16 @@
 ---
 title: "Introduction to the Weekly Treasure"
 date: 2018-03-11
+description: "An introduction to the purpose of sharing weekly lessons from studying God's Word."
+summary: "A short introduction to sharing weekly notes and reflections from studying God's Word."
 categories:
 - bible
-- spanish
+- weekly-treasure
 tags:
 - bible
 - treasure
-- Timoteo
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- timothy
+translationKey: weekly-treasure-intro
 ---
 Translating ...
 

@@ -1,23 +1,19 @@
 ---
-title: Containers raise, why OpenStack needs Kubernetes
+title: "Containers Raise: Why OpenStack Needs Kubernetes"
 date: 2017-05-15
+description: "Notes and slides from a talk about containers, Kubernetes, and OpenStack's cloud ecosystem."
+summary: "A talk about the rise of containers, Kubernetes, and how OpenStack responds to containerized cloud infrastructure."
 categories:
-- talks
 - tech
+- talks
 tags:
-- talks
-- tech
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- openstack
+- kubernetes
+- containers
+- cloud
+translationKey: containers-openstack-kubernetes
+aliases:
+- /tech/en/containers-raise/
 ---
 As member of the [OpenStack GDL](https://www.facebook.com/groups/openstackgdl/) community
 this was the first time I present a topic there.

@@ -1,25 +1,16 @@
 ---
-title: "Introducción al Tesoro Semanal"
+title: "Introducción Al Tesoro Semanal"
 date: 2018-03-11
+description: "Una introducción al propósito de compartir aprendizajes semanales de la Palabra de Dios."
+summary: "Un inicio para compartir semanalmente lo que Dios permite aprender al estudiar Su Palabra."
 categories:
 - bible
 - weekly-treasure
-- spanish
 tags:
 - bible
 - treasure
-- Timoteo
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- timoteo
+translationKey: weekly-treasure-intro
 ---
 Este es un inicio de algo que quiero emprender. Un mensaje semanal de lo que estoy
 aprendiendo al estar estudiando la palabra de Dios. El propósito es compartir lo

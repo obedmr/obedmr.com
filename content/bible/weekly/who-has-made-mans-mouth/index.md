@@ -1,24 +1,18 @@
 ---
-title: "Who has made man's mouth?"
+title: "Who Has Made Man's Mouth?"
 date: 2019-02-03
+description: "A reflection on Moses, God's calling, and trusting the One who equips those He sends."
+summary: "Moses felt inadequate for God's call, but Exodus reminds us that the Creator knows how to equip those He sends."
 categories:
 - bible
 - weekly-treasure
-- english
 tags:
 - bible
 - treasure
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- exodus
+translationKey: who-has-made-mans-mouth
+aliases:
+- /bible/weekly/en/who-has-made-man-s-mouth/
 ---
 It has been a while that I promised I'd submit a daily bible treasure. This is a time
 for new resolutions and to make it happen. I'm planning to share some extracts from my

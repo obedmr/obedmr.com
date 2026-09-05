@@ -1,23 +1,19 @@
 ---
+title: "Big Data in the Cloud? Yes, You Can Do It in OpenStack"
 date: 2016-08-26
-title: "Big Data in the Cloud? Yes, you can do it in OpenStack"
+description: "Notes and slides from a talk about using OpenStack Sahara to deploy Hadoop and Spark clusters."
+summary: "A short note from a talk about OpenStack Sahara and deploying Hadoop and Spark clusters in OpenStack."
 categories:
-- talks
 - tech
+- talks
 tags:
-- talks
-- tech
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- openstack
+- big-data
+- hadoop
+- spark
+translationKey: big-data-in-openstack
+aliases:
+- /tech/en/bigdata-in-the-cloud/
 ---
 I had the opportunity to share some of the Big Data approaches that OpenStack is offering with the
 Sahara project. With Sahara, you can deploy Hadoop and Spark clusters inside OpenStack infrastructure.

@@ -1,13 +1,17 @@
-{{/* Compatibility for older front matter from the previous theme. Blowfish uses
-   `featureimage`; the old theme used `thumbnailImage` and `coverImage`. */}}
+{{/* Keep feature images mostly Hugo-native: prefer explicit front matter, then
+   bundled image resources, then section defaults. */}}
 {{ $featureImage := .Params.featureimage }}
-{{ if not $featureImage }}{{ $featureImage = .Params.thumbnailImage }}{{ end }}
-{{ if not $featureImage }}{{ $featureImage = .Params.coverImage }}{{ end }}
 {{ if not $featureImage }}
   {{ range .Translations }}
     {{ with .Params.featureimage }}{{ $featureImage = . }}{{ end }}
-    {{ if not $featureImage }}{{ with .Params.thumbnailImage }}{{ $featureImage = . }}{{ end }}{{ end }}
-    {{ if not $featureImage }}{{ with .Params.coverImage }}{{ $featureImage = . }}{{ end }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $featureImage }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+    {{ if not $featureImage }}
+      {{ with $images.GetMatch . }}{{ $featureImage = .Name }}{{ end }}
+    {{ end }}
   {{ end }}
 {{ end }}
 {{ if not $featureImage }}

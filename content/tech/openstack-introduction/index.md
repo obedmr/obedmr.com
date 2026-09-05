@@ -1,23 +1,18 @@
 ---
-title: OpenStack Introduction
+title: "OpenStack Introduction"
 date: 2015-05-22
+description: "Notes and slides from an introductory talk about cloud computing concepts and OpenStack."
+summary: "An introductory talk about cloud computing origins, core cloud concepts, and OpenStack as infrastructure as a service."
 categories:
-- talks
-- tech-talks
-tags:
-- talks
 - tech
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- talks
+tags:
+- openstack
+- cloud
+- infrastructure
+translationKey: openstack-introduction
+aliases:
+- /tech/en/openstack-introduction/
 ---
 This is talk I gave a Zacatecas City about OpenStack. Basically, this is an introduction that explains
 the origins of Cloud computing, some key cloud concepts and how OpenStack delivers Infrastructure as a Service.

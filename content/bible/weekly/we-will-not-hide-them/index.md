@@ -1,23 +1,18 @@
 ---
-title: "We will not hide them!"
+title: "We Will Not Hide Them!"
 date: 2019-06-23
+description: "A reflection on Psalm 78 and the calling to tell the next generation about God's works."
+summary: "A reflection on Psalm 78 and the responsibility to remember, proclaim, and pass on the wonderful works of God."
 categories:
 - bible
 - weekly-treasure
 tags:
 - bible
 - treasure
-keywords:
-- javascript
-- hexo
-- disqus
-- google
-- gravatar
-autoThumbnailImage: false
-thumbnailImagePosition: "top"
-metaAlignment: center
-comments: true
-
+- psalms
+translationKey: we-will-not-hide-them
+aliases:
+- /bible/weekly/en/we-will-not-hide-them/
 ---
 _We will not hide them from their children, Telling to the generation to come tre prasies of the Lord,
 An His strength and His wonderful works that He has done. Psalm 78:4_
