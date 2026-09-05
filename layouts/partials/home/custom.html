@@ -1,0 +1,70 @@
+{{ $isSpanish := eq .Site.Language.Lang "es" }}
+{{ $latestTitle := cond $isSpanish "Lo mas reciente" "Latest writing" }}
+{{ $latestIntro := cond $isSpanish "Las ultimas notas, estudios y reflexiones publicadas en el blog." "The newest notes, studies, and reflections from the blog." }}
+{{ $aboutText := cond $isSpanish "Comparto estudios biblicos, reflexiones personales y notas sobre tecnologia. Mi meta es aprender haciendo, ensenando y dejando apuntes utiles para otros." "I share Bible studies, personal reflections, and technology notes. The aim is simple: learn by doing, learn by teaching, and leave useful notes for others." }}
+{{ $recentCount := .Site.Params.Homepage.showRecentItems | default 9 }}
+{{ $recentPages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $links := slice
+  (dict "label" "Bible Studies" "href" "/bible/")
+  (dict "label" (cond $isSpanish "Reflexiones" "Reflections") "href" "/tags/treasure/")
+  (dict "label" (cond $isSpanish "Tecnologia" "Technology") "href" "/tech/")
+  (dict "label" (cond $isSpanish "Etiquetas" "Tags") "href" "/tags/")
+}}
+
+<section class="mx-auto max-w-6xl pt-2 sm:pt-4">
+  <header class="mb-8 border-b border-neutral-200 pb-6 dark:border-neutral-700/70">
+    <div>
+      <h1 class="text-3xl font-extrabold text-neutral-900 dark:text-neutral sm:text-4xl">
+        {{ $latestTitle }}
+      </h1>
+      <p class="mt-2 max-w-2xl text-base leading-7 text-neutral-600 dark:text-neutral-300">
+        {{ $latestIntro }}
+      </p>
+    </div>
+  </header>
+
+  <section class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+    {{ range first $recentCount $recentPages }}
+      {{ partial "article-link/card.html" . }}
+    {{ end }}
+  </section>
+
+  <section class="home-about-strip mt-10 rounded-lg border border-neutral-200 bg-white/80 p-5 shadow-sm dark:border-neutral-700/80 dark:bg-neutral-900/60">
+    <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+        {{ with .Site.Params.Author.image }}
+          {{ $authorImage := resources.Get . }}
+          {{ with $authorImage }}
+            {{ $avatar := .Fill "128x128 Center" }}
+            <img
+              class="h-16 w-16 rounded-full ring-2 ring-primary-200 dark:ring-primary-500/50"
+              width="64"
+              height="64"
+              alt="{{ $.Site.Params.Author.name | default $.Site.Title }}"
+              loading="lazy"
+              src="{{ $avatar.RelPermalink }}" />
+          {{ end }}
+        {{ end }}
+        <div>
+          <h2 class="text-xl font-extrabold text-neutral-900 dark:text-neutral">
+            {{ .Site.Params.Author.name | default .Site.Title }}
+          </h2>
+          {{ with .Site.Params.Author.headline }}
+            <p class="text-sm text-neutral-600 dark:text-neutral-300">{{ . | markdownify }}</p>
+          {{ end }}
+          <div class="mt-2 flex justify-center gap-3 text-lg text-primary-700 dark:text-primary-300 sm:justify-start">
+            {{ partialCached "author-links.html" . }}
+          </div>
+        </div>
+      </div>
+      <p class="max-w-xl text-sm leading-6 text-neutral-600 dark:text-neutral-300">{{ $aboutText }}</p>
+    </div>
+    <nav class="mt-5 flex flex-wrap gap-2">
+      {{ range $links }}
+        <a class="rounded-lg border border-primary-300 px-3 py-1.5 text-sm font-semibold text-primary-700 hover:bg-primary-600 hover:text-white dark:border-primary-500/60 dark:text-primary-300 dark:hover:bg-primary-400 dark:hover:text-neutral-900" href="{{ .href | relLangURL }}">
+          {{ .label }}
+        </a>
+      {{ end }}
+    </nav>
+  </section>
+</section>

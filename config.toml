@@ -1,308 +1,194 @@
-baseURL = "http://obedmr.com/"
-languageCode = "en-us"
-title = "Obed N Munoz's Blog"
-theme = "hugo-future-imperfect-slim"
-preserveTaxonomyNames   = true
-paginate                = 3
-disqusShortname         = "obedmr"
-googleAnalytics         = "UA-51720562-1"
-pluralizeListTitles     = false
-disableLanguages        = [""]
+theme = "blowfish"
+baseURL = "https://obedmr.com/"
+title = "Obed N Munoz"
+defaultContentLanguage = "en"
+enableRobotsTXT = true
+summaryLength = 24
+enableEmoji = true
+pluralizeListTitles = false
+
+[pagination]
+  pagerSize = 8
+
+[imaging]
+  anchor = "Center"
+
+[taxonomies]
+  author = "authors"
+  tag = "tags"
+  category = "categories"
+  series = "series"
 
 [outputs]
-  home                  = ["html", "json"]
+  home = ["HTML", "RSS", "JSON"]
+
+[services]
+  [services.googleAnalytics]
+    id = "UA-51720562-1"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.highlight]
+    noClasses = false
 
 [params]
-  # Add additional section names to mainSections to include posts from
-  # those sections on the homepage.
-  enableCDN             = false
-
-  # Loads CSS and JavaScript files. The variable is an array so that you can load
-  # multiple/additional files if necessary. The standard theme files can be loaded
-  # by adding the value, "default". Default includes the add-on.css and and-on.js.
-  # Example: ["default", "/path/to/file"]
-  cssFiles              = ["default"]
-  jsFiles               = ["default"]
-  # Sets options for highlight.js
-  highlightjs           = true
-  highlightjsTheme      = "github"
-  highlightjsLang       = ["html", "css", "js", "toml"]
-  # Sets where "View More Posts" links to
-  viewMorePostsLink     = "/"
-  # Activate Estimated Reading Times, which appear in the post headers
-  readingTime           = true
-  # Sets which Social Share links appear in posts.
-  # Options are twitter, facebook, reddit, linkedin, pinterest, email
-  #socialShare           = ["twitter", "facebook", "reddit", "linkedin",
-  #                        "pinterest", "email"]
-  mainSections = ["bible", "tech", "music"]
-
-  [params.meta]
-    # Sets the meta tag description
-    description         = "Obed N Munoz Personal blog."
-    # Sets the meta tag author
-    author              = "Obed N Munoz"
-    # If you would like to add more comprehensive favicon support passed root
-    # directory favicon.ico, utlize this funtion. It is recommened to use
-    # https://realfavicongenerator.net to generate your icons as that is the basis
-    # for the theme's naming.
-    favicon             = false
-    svg                 = true
-    faviconVersion      = "1"
-    msColor             = "#ffffff" # Copy from the https://realfavicongenerator.net
-    iOSColor            = "#ffffff" # Copy from the https://realfavicongenerator.net
+  colorScheme = "obed-blue"
+  defaultAppearance = "light"
+  autoSwitchAppearance = true
+  enableSearch = true
+  enableCodeCopy = true
+  description = "Bible studies, reflections, and technology notes by Obed N Munoz."
+  mainSections = ["bible", "tech", "2017"]
+  disableImageOptimization = false
+  disableImageZoom = false
+  hotlinkFeatureImage = true
+  thumbnailAspectRatio = "1.45"
+  imagePosition = "50% 50%"
 
   [params.header]
-    # Sets the navbarTitle that appears in the top left of the navigation bar
-    navbarTitle         = "Obed N Munoz's Blog"
-    # Sets navbarTitle to match the section of the website
-    dynamicTitles       = true
-    searchMenu          = true
-    shareMenu           = true
-    languageMenu        = true
-
-  # These are optional params related to the sidebar. They are recommended, but not
-  # required for proper functionality. HTML is supported within the params.
-  [params.intro]
-    header                = "Learn by doing, learn by teaching"
-    paragraph             = "Yes, we can make a difference"
-    rssIntro              = true
-    socialIntro           = true
-    # You may not want to display a long intro above content in the
-    # single column layout used on smaller screens.
-    hideWhenSingleColumn  = false
-    # But you may want to always display the intro on the homepage.
-    alwaysOnHomepage      = false
-
-    # This appears at the top of the sidebar above params.intro.header.
-    # A width of less than 100px is recommended from a design perspective.
-    [params.intro.pic]
-      src                 = "/img/main/me.jpeg"
-      # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
-      shape               = "circle"
-      width               = ""
-      alt                 = "Obed N Munoz"
-
-  [Languages.es.params.intro]
-    header                = "Aprende haciendo, aprende enseñando"
-    paragraph             = "Si, si podemos hacer una diferencia"
-    rssIntro              = true
-    socialIntro           = true
-    # You may not want to display a long intro above content in the
-    # single column layout used on smaller screens.
-    hideWhenSingleColumn  = false
-    # But you may want to always display the intro on the homepage.
-    alwaysOnHomepage      = false
-
-    # This appears at the top of the sidebar above params.intro.header.
-    # A width of less than 100px is recommended from a design perspective.
-  [Languages.es.params.intro.pic]
-      src                 = "/img/main/me.jpeg"
-      # Masks image in a certain shape. Supported are circle, triangle, diamond, and hexagon.
-      shape               = "circle"
-      width               = ""
-      alt                 = "Obed N Munoz"
-
-
-  [params.sidebar]
-    about               = "test"
-    # Sets the number of recent posts to show in the sidebar. The default value is 5.
-    postAmount          = 5
-    # set to show or to hide categories in the sidebar
-    categories          = true
-    # Sets Categories to sort by number of posts instead of alphabetical
-    categoriesByCount   = true
+    layout = "fixed-fill-blur"
 
   [params.footer]
-    # Sets RSS icons to appear on the sidebar with the social media buttons
-    rssFooter           = true
-    # Sets Social Media icons to appear on the sidebar
-    socialFooter        = true
+    showMenu = true
+    showCopyright = true
+    showThemeAttribution = true
+    showAppearanceSwitcher = true
+    showScrollToTop = true
 
-  # Disqus will take priority over Staticman (github.com/eduardoboucas/staticman)
-  # due to its ease of use. Feel free to check out both and decide which you would
-  # prefer to use. See staticman.yml for additional settings.
-  [params.staticman]
-    # If using GitHub, go to https://github.com/apps/staticman-net
-    # If using GitLab, just add the GitLab bot, NO need to hit `/connect/v3/...`
-    enabled             = false
-    api                 = ""  # without trailing slash, defaults to "staticman3.herokuapp.com"
-    gitProvider         = "github"  # either "github" or "gitlab"
-    username            = ""
-    repo                = ""
-    branch              = ""
+  [params.homepage]
+    layout = "custom"
+    showRecent = false
+    showRecentItems = 9
+    showMoreLink = false
+    cardView = true
+    cardViewScreenWidth = false
 
-    [params.staticman.recaptcha]
-      # Both keys must be present to enable recaptcha
-      siteKey           = "" # Site Key
-      encryptedKey      = ""
+  [params.article]
+    showDate = true
+    showAuthor = true
+    showReadingTime = true
+    showWordCount = true
+    showTableOfContents = true
+    showHeadingAnchors = true
+    showTaxonomies = true
+    showCategories = true
+    showTags = true
+    showPagination = true
+    showZenMode = true
 
+  [params.list]
+    showSummary = true
+    showCards = true
+    cardView = true
+    featureImageHover = true
+    groupByYear = false
+    constrainItemsWidth = true
 
-[menu]
-  # Sets the menu items in the navigation bar
-  # Identifier prepends a Font Awesome icon to the menu item
-  [[menu.main]]
-    name              = "Home"
-    identifier        = "home"
-    url               = "/"
-    pre               = "<i class='fa fa-home'></i>"
-    weight            = 1
+  [params.taxonomy]
+    showTermCount = true
+    cardView = true
 
-  [[menu.main]]
-    name              = "About"
-    identifier        = "about"
-    url               = "/about/"
-    pre               = "<i class='far fa-id-card'></i>"
-    weight            = 2
+  [params.term]
+    groupByYear = false
+    cardView = true
 
-  [[menu.main]]
-    name              = "Bible Studies"
-    identifier        = "bible"
-    url               = "/bible/"
-    pre               = "<i class='sidebar-button-icon fa fa-lg fa-book'></i>"
-    weight            = 3
+[languages]
+  [languages.en]
+    disabled = false
+    locale = "en"
+    label = "English"
+    weight = 1
+    title = "Obed N Munoz"
 
-  [[menu.main]]
-    name              = "Music"
-    identifier        = "music"
-    url               = "/music/"
-    pre               = "<i class='sidebar-button-icon fa fa-lg fa-music'></i>"
-    weight            = 4
+    [languages.en.params]
+      displayName = "EN"
+      isoCode = "en"
+      dateFormat = "January 2, 2006"
+      description = "Bible studies, reflections, and technology notes by Obed N Munoz."
 
+      [languages.en.params.author]
+        name = "Obed N Munoz"
+        image = "img/main/me.jpeg"
+        headline = "Learn by doing, learn by teaching."
+        bio = "Bible studies, reflections, and technology notes for a thoughtful life."
+        links = [
+          { github = "https://github.com/obedmr" },
+          { gitlab = "https://gitlab.com/obedmr" },
+          { linkedin = "https://linkedin.com/in/obedmr" },
+          { facebook = "https://facebook.com/obedmr" },
+          { twitter = "https://twitter.com/_obedmr" },
+          { telegram = "https://t.me/obedmr" },
+          { keybase = "https://keybase.io/obedmr" },
+          { email = "mailto:obed.n.munoz@gmail.com" },
+        ]
 
-  [[menu.main]]
-    name              = "Technology"
-    identifier        = "tech"
-    url               = "/tech/"
-    pre               = "<i class='sidebar-button-icon fa fa-lg fa-laptop-code'></i>"
-    weight            = 5
+    [[languages.en.menus.main]]
+      name = "Bible"
+      pageRef = "bible"
+      weight = 10
 
-  [[menu.main]]
-    name              = "Categories"
-    identifier        = "categories"
-    url               = "/categories/"
-    pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 6
+    [[languages.en.menus.main]]
+      name = "Tech"
+      pageRef = "tech"
+      weight = 20
 
-  [[menu.main]]
-    name              = "Contact"
-    identifier        = "contact"
-    url               = "/contact/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 7
+    [[languages.en.menus.main]]
+      name = "Categories"
+      pageRef = "categories"
+      weight = 30
 
-[Languages]
-  # Each language has its own menu.
-  [Languages.en]
-    LanguageCode        = "en"
-    LanguageName        = "English"
-    weight              = 1
+    [[languages.en.menus.main]]
+      name = "Tags"
+      pageRef = "tags"
+      weight = 40
 
-  [Languages.es]
-    LanguageCode        = "es"
-    LanguageName        = "Español"
-    weight              = 2
+  [languages.es]
+    disabled = false
+    locale = "es"
+    label = "Espanol"
+    weight = 2
+    title = "Obed N Munoz"
 
-  [[Languages.es.menu.main]]
-      name              = "Inicio"
-      identifier        = "home"
-      url               = "/"
-      pre               = "<i class='fas fa-home'></i>"
-      weight            = 1
+    [languages.es.params]
+      displayName = "ES"
+      isoCode = "es"
+      dateFormat = "2 January 2006"
+      description = "Estudios biblicos, reflexiones y notas de tecnologia por Obed N Munoz."
 
-  [[Languages.es.menu.main]]
-      name              = "Acerca"
-      identifier        = "about"
-      url               = "/about/"
-      pre               = "<i class='fas fa-id-card'></i>"
-      weight            = 2
+      [languages.es.params.author]
+        name = "Obed N Munoz"
+        image = "img/main/me.jpeg"
+        headline = "Aprende haciendo, aprende ensenando."
+        bio = "Estudios biblicos, reflexiones y notas de tecnologia para una vida pensada."
+        links = [
+          { github = "https://github.com/obedmr" },
+          { gitlab = "https://gitlab.com/obedmr" },
+          { linkedin = "https://linkedin.com/in/obedmr" },
+          { facebook = "https://facebook.com/obedmr" },
+          { twitter = "https://twitter.com/_obedmr" },
+          { telegram = "https://t.me/obedmr" },
+          { keybase = "https://keybase.io/obedmr" },
+          { email = "mailto:obed.n.munoz@gmail.com" },
+        ]
 
-  [[Languages.es.menu.main]]
-      name              = "Estudios Bíblicos"
-      identifier        = "bible"
-      url               = "/bible/"
-      pre               = "<i class='sidebar-button-icon fa fa-lg fa-book'></i>"
-      weight            = 3
+    [[languages.es.menus.main]]
+      name = "Biblia"
+      pageRef = "bible"
+      weight = 10
 
+    [[languages.es.menus.main]]
+      name = "Tecnologia"
+      pageRef = "tech"
+      weight = 20
 
-  [[Languages.es.menu.main]]
-    name              = "Música"
-    identifier        = "music"
-    url               = "/music/"
-    pre               = "<i class='sidebar-button-icon fa fa-lg fa-music'></i>"
-    weight            = 4
+    [[languages.es.menus.main]]
+      name = "Categorias"
+      pageRef = "categories"
+      weight = 30
 
-
-  [[Languages.es.menu.main]]
-    name              = "Tecnología"
-    identifier        = "tech"
-    url               = "/tech/"
-    pre               = "<i class='sidebar-button-icon fa fa-lg fa-laptop-code'></i>"
-    weight            = 5
-
-  [[Languages.es.menu.main]]
-    name              = "Categorías"
-    identifier        = "categories"
-    url               = "/categories/"
-    pre               = "<i class='fas fa-sitemap'></i>"
-    weight            = 6
-
-  [[Languages.es.menu.main]]
-    name              = "Contacto"
-    identifier        = "contact"
-    url               = "/contact/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 7
-
-
-
-# Sets Social Media icons to appear and link to your account. Value should be your
-# username unless otherwise noted. These are the icons affected by socialAppearAtTop
-# and socialAppearAtBottom.
-[social]
-  # Coding Communities
-  github                = "obedmr"
-  gitlab                = "obedmr"
-  stackoverflow         = ""
-  bitbucket             = ""
-  jsfiddle              = ""
-  codepen               = ""
-  # Visual Art Communities
-  deviantart            = ""
-  flickr                = ""
-  behance               = ""
-  dribbble              = ""
-  # Publishing Communities
-  wordpress             = ""
-  medium                = ""
-  # Professional/Business Oriented Communities
-  linkedin              = "obedmr"
-  linkedin_company      = ""
-  foursquare            = ""
-  xing                  = ""
-  slideshare            = ""
-  # Social Networks
-  facebook              = "obedmr"
-  googleplus            = ""
-  reddit                = ""
-  quora                 = ""
-  youtube               = ""
-  vimeo                 = ""
-  whatsapp              = ""
-  wechat              = ""
-  qq                  = "" # User ID Number
-  instagram             = ""
-  tumblr                = ""
-  twitter               = "_obedmr"
-  skype                 = ""
-  snapchat              = ""
-  pinterest             = ""
-  telegram              = "obedmr"
-  vine                  = ""
-  googlescholar         = ""
-  orcid                 = ""
-  researchgate          = ""
-  keybase               = "obedmr"
-  mastodon              = ""
-  # Email
-  email                 = "obed.n.munoz@gmail.com"
+    [[languages.es.menus.main]]
+      name = "Etiquetas"
+      pageRef = "tags"
+      weight = 40

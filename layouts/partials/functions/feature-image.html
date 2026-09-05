@@ -1,0 +1,25 @@
+{{/* Compatibility for older front matter from the previous theme. Blowfish uses
+   `featureimage`; the old theme used `thumbnailImage` and `coverImage`. */}}
+{{ $featureImage := .Params.featureimage }}
+{{ if not $featureImage }}{{ $featureImage = .Params.thumbnailImage }}{{ end }}
+{{ if not $featureImage }}{{ $featureImage = .Params.coverImage }}{{ end }}
+{{ if not $featureImage }}
+  {{ range .Translations }}
+    {{ with .Params.featureimage }}{{ $featureImage = . }}{{ end }}
+    {{ if not $featureImage }}{{ with .Params.thumbnailImage }}{{ $featureImage = . }}{{ end }}{{ end }}
+    {{ if not $featureImage }}{{ with .Params.coverImage }}{{ $featureImage = . }}{{ end }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $featureImage }}
+  {{ $section := lower .Section }}
+  {{ $categories := apply (.Params.categories | default slice) "lower" "." }}
+  {{ if or (eq $section "bible") (in $categories "bible") }}
+    {{ $featureImage = "img/defaults/bible-reading.png" }}
+  {{ else if or (eq $section "tech") (in $categories "tech") }}
+    {{ $featureImage = "img/defaults/tech-creative.png" }}
+  {{ end }}
+{{ end }}
+{{ if and $featureImage (hasPrefix $featureImage "//") }}
+  {{ $featureImage = printf "https:%s" $featureImage }}
+{{ end }}
+{{ return $featureImage }}
