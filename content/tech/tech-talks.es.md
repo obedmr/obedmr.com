@@ -27,4 +27,4 @@ El propósito de esta página es para listar las pláticas tecnológicas que me 
 2015
 ----
 - _**Mayo**_
-  - **CISOL 2014 - _Zacatecas, México_** - [Vagrant: A fast way for building development environments]({{< relref "tech/es/vagrant.md" >}})
+  - **CISOL 2014 - _Zacatecas, México_** - [Vagrant: A fast way for building development environments]({{< relref "tech/es/vagrant.es.md" >}})
